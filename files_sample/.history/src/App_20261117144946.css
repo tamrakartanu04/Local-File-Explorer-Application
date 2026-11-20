@@ -1,0 +1,215 @@
+<CodeBlock language="css" editable>
+* {
+  box-sizing: border-box;
+}
+
+
+body {
+margin: 0;
+font-family: Arial, sans-serif;
+background: #1e1e1e;
+color: #d4d4d4;
+}
+
+.app {
+min-height: 100vh;
+display: flex;
+flex-direction: column;
+}
+
+.header {
+padding: 18px 24px;
+background: #252526;
+border-bottom: 1px solid #444;
+display: flex;
+justify-content: space-between;
+align-items: center;
+gap: 15px;
+}
+
+.header h1 {
+margin: 0;
+font-size: 22px;
+}
+
+.header p {
+margin: 6px 0 0;
+color: #999;
+font-size: 13px;
+}
+
+.open-button {
+background: #007acc;
+color: white;
+border: none;
+padding: 11px 18px;
+border-radius: 5px;
+cursor: pointer;
+font-size: 14px;
+}
+
+.open-button:hover {
+background: #0062a3;
+}
+
+.workspace {
+display: grid;
+grid-template-columns: 300px 1fr;
+flex: 1;
+min-height: 450px;
+}
+
+.sidebar {
+background: #252526;
+border-right: 1px solid #444;
+padding: 15px 0;
+overflow: auto;
+}
+
+.root-name {
+padding: 10px 15px;
+font-weight: bold;
+overflow-wrap: anywhere;
+}
+
+.explorer h3,
+.properties h3 {
+font-size: 12px;
+letter-spacing: 1px;
+color: #aaa;
+padding: 10px 15px;
+border-bottom: 1px solid #444;
+}
+
+.tree-item {
+min-height: 32px;
+display: flex;
+align-items: center;
+}
+
+.tree-item:hover {
+background: #2a2d2e;
+}
+
+.tree-item.selected {
+background: #094771;
+}
+
+.tree-button {
+background: transparent;
+border: none;
+color: #ddd;
+text-align: left;
+width: 100%;
+padding: 7px 8px;
+cursor: pointer;
+font-size: 13px;
+display: flex;
+align-items: center;
+gap: 9px;
+overflow-wrap: anywhere;
+}
+
+.empty-folder {
+font-size: 12px;
+color: #888;
+padding-top: 6px;
+padding-bottom: 6px;
+}
+
+.main-panel {
+padding: 20px;
+overflow: auto;
+}
+
+.properties h3 {
+padding-left: 0;
+}
+
+.property-card {
+max-width: 650px;
+background: #252526;
+border: 1px solid #444;
+padding: 20px;
+border-radius: 8px;
+}
+
+.property-card h2 {
+font-size: 19px;
+margin-top: 0;
+margin-bottom: 22px;
+overflow-wrap: anywhere;
+}
+
+.property-row {
+display: grid;
+grid-template-columns: 130px minmax(0, 1fr);
+gap: 12px;
+padding: 13px 0;
+border-bottom: 1px solid #444;
+font-size: 13px;
+}
+
+.property-row span {
+color: #999;
+}
+
+.property-row strong {
+overflow-wrap: anywhere;
+font-weight: 500;
+}
+
+.muted {
+color: #888;
+padding: 12px 15px;
+font-size: 13px;
+}
+
+.status {
+padding: 30px;
+text-align: center;
+color: #ccc;
+}
+
+.message {
+background: #5c3030;
+color: white;
+padding: 12px 20px;
+display: flex;
+justify-content: space-between;
+gap: 10px;
+}
+
+.message button {
+cursor: pointer;
+}
+
+.error {
+color: #ff7777;
+}
+
+.footer {
+background: #007acc;
+color: white;
+padding: 10px;
+text-align: center;
+font-size: 12px;
+}
+
+@media (max-width: 650px) {
+.header {
+align-items: flex-start;
+flex-direction: column;
+}
+
+.workspace {
+grid-template-columns: 1fr;
+}
+
+.sidebar {
+border-right: none;
+border-bottom: 1px solid #444;
+max-height: 350px;
+}
+}
+</CodeBlock>

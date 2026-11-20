@@ -1,0 +1,14 @@
+
+/* Ensure the application uses the full available width */
+html,
+body,
+#root {
+  min-height: 100%;
+  width: 100%;
+  margin: 0;
+}
+
+/* Use the same font for all buttons */
+button {
+  font-family: inherit;
+}
